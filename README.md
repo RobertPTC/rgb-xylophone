@@ -2,6 +2,8 @@
 
 Welcome to the RGB Xylophone toy! Once you have the project up and running, just click on the image of the xylophone to create a rainbow composition.
 
+[Check it out live here!](http://lazarustechnology.org/rgb-xylophone)
+
 ## Installation:
 npm i
 
