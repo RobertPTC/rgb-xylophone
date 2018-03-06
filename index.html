@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>RGB Xylophone</title>
+    <style media="screen">
+      * {
+        box-sizing: border-box;
+        font-family: Muli;
+      }
+      h1, p {
+        font-size: 18px;
+        text-align: center;
+      }
+      body {
+        margin: auto;
+        padding: 10px;
+        max-width: 1400px;
+      }
+      canvas {
+        cursor: pointer;
+      }
+      #canvas-container {
+        width: 100%;
+        border: 5px solid black;
+      }
+      #rgb-chords {
+        overflow: scroll;
+        height: 100px;
+        border: 1px solid black;
+        border-radius: 5px;
+        margin: 10px auto;
+      }
+      .chord {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: inline-block;
+        margin: 10px 10px 0 10px;
+      }
+      .highlighted-chord {
+        border: 3px solid black;
+      }
+      .composition-container p {
+        font-weight: bold;
+      }
+      .composition-container button {
+        width: 50%;
+        margin: auto;
+        display: block;
+        padding: 10px;
+        background: linear-gradient(to right, orange , yellow, green, cyan, blue, violet);
+        font-size: 18px;
+        font-weight: bold;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      @media screen and (min-width: 960px) {
+        .composition-container button {
+          width: 25%;
+        }
+        #rgb-chords {
+          width: 50%;
+        }
+        body {
+          padding: 10px 100px;
+        }
+      }
+    </style>
+    <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+  </head>
+  <body>
+    <h1>Click on the Xylophone to play it!</h1>
+    <p>Each chord corresponds to the RGB data of the pixel you clicked on</p>
+    <div id="canvas-container">
+      <canvas id="canvas"></canvas>
+    </div>
+    <div class="composition-container">
+      <p>These are the RGB notes of your composition</p>
+      <div id="rgb-chords"></div>
+      <button id="play-button">Play Composition</button>
+    </div>
+    <script type="text/javascript">
+      window.RGB_XYLOPHONE_APP = {
+        CONSTANTS: {
+          CONTAINER_MARGIN: 20
+        }
+      };
+    </script>
+    <script type="text/javascript" src="/utilities/calculateAspectRatioToFit.js"></script>
+    <script type="text/javascript" src="/utilities/loadImage.js"></script>
+    <script type="text/javascript" src="/utilities/chordIntervals.js"></script>
+    <script type="text/javascript" src="/utilities/generateChordIntervalAudio.js"></script>
+    <script type="text/javascript" src="/utilities/generateChordInterval.js"></script>
+    <script type="text/javascript" src="/components/RgbAudioGraph.js"></script>
+    <script type="text/javascript" src="/components/RgbChords.js"></script>
+    <script type="text/javascript" src="/components/Canvas.js"></script>
+    <script type="text/javascript" src="/index.js"></script>
+  </body>
+</html>

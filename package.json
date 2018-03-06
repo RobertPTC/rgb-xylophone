@@ -1,0 +1,15 @@
+{
+  "name": "rgb-xylophone",
+  "version": "1.0.0",
+  "description": "Make music with color",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "author": "R P Cunningham",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.2"
+  }
+}
